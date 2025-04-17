@@ -1,4 +1,4 @@
-FROM ghcr.io/gitpod-io/openvscode-server:latest
+FROM gitpod/openvscode-server:latest
 
 USER root
 RUN apt-get update && apt-get install -y \
@@ -15,6 +15,6 @@ COPY extensoes.txt /tmp/extensoes.txt
 RUN while IFS= read -r extension || [[ -n "$extension" ]]; do \
     if [[ ! "$extension" =~ ^# && -n "$extension" ]]; then \
     echo "Installing extension: $extension" && \
-    /usr/bin/code-server --install-extension "$extension"; \
+    /usr/bin/openvscode-server --install-extension "$extension" || true; \
     fi \
     done < /tmp/extensoes.txt

@@ -2,7 +2,7 @@ services:
   openvscode:
     build:
       context: .
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     container_name: openvscode
     user: "1000:1000"
     environment:
