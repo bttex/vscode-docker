@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  openvscode:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: openvscode
+    user: "1000:1000"
+    environment:
+      - TZ=America/Sao_Paulo
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - /home/itbttex/projetos:/projects
+      - F:/ExtensoesVSCode:/vsix
+      - /home/itbttex/.ssh:/root/.ssh
+    ports:
+      - 3002:3000
+    restart: unless-stopped
