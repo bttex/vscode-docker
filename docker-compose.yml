@@ -11,7 +11,7 @@ services:
       - PGID=1000
     volumes:
       - /home/itbttex/projetos:/projects
-      - F:/ExtensoesVSCode:/vsix
+      - /mnt/f/ExtensoesVSCode:/vsix:rw
       - /home/itbttex/.ssh:/root/.ssh
     ports:
       - 3002:3000
