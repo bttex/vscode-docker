@@ -13,6 +13,7 @@ services:
       - /home/itbttex/projetos:/projects
       - /mnt/f/ExtensoesVSCode:/vsix:rw
       - /home/itbttex/.ssh:/home/workspace/.ssh
+      - /home/itbttex/vscode-home:/home/workspace
     ports:
       - 3002:3000
     restart: unless-stopped
