@@ -10,10 +10,7 @@ services:
       - PUID=1000
       - PGID=1000
     volumes:
-      - /home/itbttex/projetos:/projects
-      - /mnt/f/ExtensoesVSCode:/vsix:rw
-      - /home/itbttex/.ssh:/home/workspace/.ssh
-      - /home/itbttex/vscode-home:/home/workspace
+       - /home/itbttex/vscode-home:/home/workspace:rw
     ports:
       - 3002:3000
     restart: unless-stopped
