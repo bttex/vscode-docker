@@ -18,3 +18,5 @@ RUN while IFS= read -r extension || [[ -n "$extension" ]]; do \
     /usr/bin/openvscode-server --install-extension "$extension" || true; \
     fi \
     done < /tmp/extensoes.txt
+
+#teste salvar arquivos code web
